@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';//TODA FEZ QUE FOR COMEÇA TEM IMPORTA
 
 import axios from "axios"
-
+import { useHistory } from 'react-router-dom';
 import People from "../../assets/Consulting_Isometric 1.png";
 import Arrow from "../../assets/arrow.png";
 
@@ -15,7 +15,7 @@ import {
   Input,
   Button,
 
-} from './styles';
+} from '../styles';
 
 
 
@@ -24,6 +24,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const inputName = useRef()
   const inputAge = useRef()
+  const history = useHistory()
 
   async function addNewUser() {
 
@@ -35,8 +36,8 @@ function App() {
     })
 
     setUsers([...users, newUser])
-
-
+  history.push("/Usuario")
+   
   }
 
 

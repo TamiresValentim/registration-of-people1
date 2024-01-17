@@ -1,12 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Users from './containers/users'
-//import Home from "./containers/Home";
-
-import GlobalStyle from "./globalStyle";
+import ReactDOM from "react-dom/client";//este client é para dá falso
+import GlobalStyle from "./styles/globalStyle";
+import Routes from "./routes"
 
 
-ReactDOM.render(
-<> 
- <Users/> <GlobalStyle /> 
-    </>, document.getElementById("root"));
+const Root = ReactDOM.createRoot(document.getElementById ('root'));
+Root.render(
+
+   <React.StrictMode>
+      <Routes/>
+   <GlobalStyle />
+
+   </React.StrictMode>
+);

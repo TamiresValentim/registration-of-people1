@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import Background from '../../assets/bg image.png'
+import Background from '../../assets/bg image.png';
+
 
 export const Container = styled.div`
-width: 100vw;
-height: 112vh;
+
 background: url('${Background}');
 background-size: cover;
 display: flex;
@@ -18,6 +18,7 @@ margin-top: 30px;
 `;
 
 export const ContainerItens = styled.div`
+
 background: linear-gradient(
  157.44deg,
 rgba(255, 255, 255, 0.6)0.84%,
@@ -26,7 +27,6 @@ rgba(255, 255, 255, 0.6)0.85%,
 );
 height: 1000px;
 border-radius: 61px 61px 0 0;
-backdrop-filter: blur(45px);
 margin-left: 25px;
 padding: 50px 30px;
 display: flex;
@@ -72,11 +72,11 @@ line-height: 25px;
 export const Button = styled.button`
 width: 342px;
 height: 74px;
-margin-top: 120px;
+
 
 background: rgba(0,0,0,0.8);
 border-radius: 14px;
-border:1px solid #ffffff;
+border:none;
 color: #ffffff;
 font-style: normal;
 font-weight: bold;

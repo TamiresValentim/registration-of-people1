@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';//TODA FEZ QUE FOR COMEÇA TEM IMPORTA
+import React, { useState,  useEffect } from 'react';//TODA FEZ QUE FOR COMEÇA TEM IMPORTA
 import axios from "axios"
+import {useHistory} from 'react-router-dom'
 
 import Avatar from "../../assets/avatar.png";
 import Arrow from "../../assets/arrow.png";
@@ -10,8 +11,6 @@ import {
   Image,
   ContainerItens,
   H1,
-  Inputlabel,
-  Input,
   Button,
   User
 } from './styles';
@@ -21,22 +20,8 @@ import {
 function Users() {
 
   const [users, setUsers] = useState([]);
-  const inputName = useRef()
-  const inputAge = useRef()
-
-   async function addNewUser() {
-
-    const {data:newUser} = await axios.post("http://localhost:3001/users",{
-  
-        name: inputName.current.value, 
-        age: inputAge.current.value,
-  
-      })
-      
-      setUsers([...users, newUser ])
-
-
-  }
+  const history = useHistory()
+   
   
   useEffect(() => {
 
@@ -57,6 +42,9 @@ fetchUsers()
     
      setUsers(newUser)
   }
+  function goBackPage(){
+    history.goBack()
+  }
 
  
   return (
@@ -66,9 +54,9 @@ fetchUsers()
 
       <ContainerItens>
 
-        <H1>Olá</H1>
+        <H1>Usuário</H1>
 
-        <Inputlabel>Usuário</Inputlabel>
+      
         
 
      
@@ -85,7 +73,7 @@ fetchUsers()
 
           }
         </ul>
-           <Button onClick={addNewUser}> <img alt="arrow" src={Arrow} /> VOLTAR
+           <Button onClick={goBackPage} > <img alt="arrow" src={Arrow} /> VOLTAR
             </Button>
 
       </ContainerItens>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';//TODA FEZ QUE FOR COMEÇA TEM IMPORTA
 import axios from "axios"
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import Avatar from "../../assets/avatar.png";
 import Arrow from "../../assets/arrow.png";
@@ -20,7 +20,7 @@ import {
 function Users() {
 
   const [users, setUsers] = useState([]);
-  const history = useHistory()
+  const navigate = useNavigate()
 
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function Users() {
     setUsers(newUser)
   }
   function goBackPage() {
-    history.goBack()
+    navigate("/")
   }
 
 

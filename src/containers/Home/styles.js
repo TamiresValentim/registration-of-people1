@@ -3,14 +3,12 @@ import Background from '../../assets/bg image.png';
 
 
 export const Container = styled.div`
-
 background: url('${Background}');
 background-size: cover;
 display: flex;
 flex-direction: column;
 align-items: center;
 gap: 30px;
-
 `;
 
 export const Image = styled.img`

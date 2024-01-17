@@ -15,7 +15,7 @@ import {
   Input,
   Button,
 
-} from '../styles';
+} from './styles';
 
 
 
@@ -36,7 +36,7 @@ function App() {
     })
 
     setUsers([...users, newUser])
-  history.push("/Usuario")
+  history.push("/cadastro")
    
   }
 

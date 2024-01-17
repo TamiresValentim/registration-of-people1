@@ -9,7 +9,7 @@ function Routes() {
         <Router>
             <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/Usuario" component={Users} />
+            <Route exact path="/cadastro" component={Users} />
             </Switch>
         </Router>
     )

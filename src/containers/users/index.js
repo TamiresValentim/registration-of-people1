@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';//TODA FEZ QUE FOR COMEÇA TEM IMPORTA
 import axios from "axios"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 import Avatar from "../../assets/avatar.png";
 import Arrow from "../../assets/arrow.png";
-import Trash from "../../assets/trash.png"
-
+import Trash from "../../assets/trash.png";
+import H1 from "../../components/Title";
+import ContainerItens from "../../components/containeritens"
+import Button from "../../components/Button"
 import {
   Container,
   Image,
-  ContainerItens,
-  H1,
-  Button,
   User
 } from './styles';
 
@@ -52,16 +51,11 @@ function Users() {
 
       <Image alt="main image" src={Avatar} />
 
-      <ContainerItens>
+      <ContainerItens isblur={true}>
 
         <H1>Usuário</H1>
 
-
-
-
-
-
-        <ul>
+       <ul>
           {users.map((user) => (
 
             <User key={user.id}>
@@ -73,7 +67,7 @@ function Users() {
 
           }
         </ul>
-        <Button onClick={goBackPage} > <img alt="arrow" src={Arrow} /> VOLTAR
+        <Button isBack={true} onClick={goBackPage} > <img alt="arrow" src={Arrow} /> VOLTAR
         </Button>
 
       </ContainerItens>

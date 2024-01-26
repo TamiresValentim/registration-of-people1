@@ -5,16 +5,17 @@ import { useNavigate } from 'react-router-dom';
 import People from "../../assets/Consulting_Isometric 1.png";
 import Arrow from "../../assets/arrow.png";
 
+import ContainerItens from "../../components/containeritens"
+import H1 from "../../components/Title"
+import Button from "../../components/Button"
+
 
 import {
   Container,
   Image,
-  ContainerItens,
-  H1,
   Inputlabel,
   Input,
-  Button,
-
+ 
 } from './styles';
 
 
